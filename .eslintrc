@@ -1,0 +1,68 @@
+{
+  "plugins": [
+      "chai-friendly",
+      "promise"
+  ],
+  "rules": {
+      "promise/always-return": "error",
+      "promise/no-return-wrap": "error",
+      "promise/param-names": "error",
+      "promise/catch-or-return": "error",
+      "promise/no-native": "off",
+      "promise/no-nesting": "warn",
+      "promise/no-promise-in-callback": "warn",
+      "promise/no-callback-in-promise": "warn",
+      "require-await": "error",
+      "quotes": [2, "single"],
+      "max-len": ["error", 100, {
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreTemplateLiterals": true
+      }],
+      "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
+      "import/prefer-default-export": [0],
+      "class-methods-use-this": [0],
+      "import/extensions": [0],
+      "import/no-dynamic-require": [0],
+      "comma-dangle": ["error", "always-multiline"],
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "semi": ["error", "never"],
+      "import/no-extraneous-dependencies": [0],
+      "import/no-unresolved": [0],
+      "global-require": [0],
+      "no-param-reassign": [0],
+      "prefer-destructuring": [0],
+      "no-use-before-define": [
+        "error",
+        {
+          "functions": false
+        }
+      ],
+      "no-empty": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "Promise": false,
+    "sinon": true,
+    "expect": true,
+    "logger": true,
+    "APPCONFIG": true,
+    "analytics": true
+  }
+}

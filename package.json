@@ -1,0 +1,42 @@
+{
+  "name": "plata-o-fomo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/start.js",
+    "lint": "eslint ./src/**/*.js ./*.js",
+    "test": "cross-env NODE_ENV=test node ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha --opts mocha.opts"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "bluebird": "^3.4.7",
+    "node-bittrex-api": "^0.8.1",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^5.1.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.1",
+    "sinon-chai": "^2.14.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}
