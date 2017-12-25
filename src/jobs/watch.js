@@ -55,7 +55,7 @@ async function findCoin(text) {
   if (coin) {
     await buyAsset(coin)
   } else {
-    console.log('Could not find any coin existing on Bittrex ... :(')
+    console.log('Could not find any matching coin existing on Bittrex ... :(')
   }
 }
 
@@ -108,9 +108,7 @@ export async function watch() {
 
   assets = markets.map(({ MarketName }) => MarketName.split('-')[1])
 
-  await buyAsset('SC')
-
-  await twitter.stream('statuses/filter', { follow: '730371390822592513' }, stream => {
+  await twitter.stream('statuses/filter', { follow: '961445378' }, stream => {
     stream.on('data', analysisTweet)
   })
 }
