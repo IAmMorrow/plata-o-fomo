@@ -39,6 +39,8 @@ async function buyOrder(market, quantity, rate) {
 function analysisTweet(tweet) {
   const { text, user } = tweet
 
+  if (user.name !== 'John McAfee') return
+
   console.log(`got a new tweet from ${user.name}`)
 
   if (text.startsWith(startPattern)) {
@@ -47,6 +49,7 @@ function analysisTweet(tweet) {
   } else {
     console.log(`tweet is not starting with "${startPattern}" pattern`)
   }
+  console.log(text)
 }
 
 async function findCoin(text) {
